@@ -11,6 +11,8 @@ image:
 
 containerPort: 80
 
+env: "dev"
+
 service:
   type: ClusterIP
   port: 80

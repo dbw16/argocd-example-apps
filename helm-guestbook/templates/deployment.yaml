@@ -37,6 +37,9 @@ spec:
               path: /
               port: http
           resources:
+          env:
+            - name: ENV
+              value: {{.Values.env}}
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
       nodeSelector:
