@@ -1,27 +1,20 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: helm-guestbook
+  name: guestbook-def
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: helm-hooks
+  name: guestbook-test
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: kustomize-guestbook
-  annotations:
-    argocd.argoproj.io/sync-wave: "-1"
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: sync-waves
+  name: guestbook-prod
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
